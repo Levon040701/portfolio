@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="palettes.css">
+    <title>Портфолио</title>
+</head>
+<body onload="changeColors()">
+    <header class="primaryBg primaryColor _1">
+        <div id="myLogo">
+            <a href="#" class="secondaryBg _1"><img src="./images/myLogo.png" alt="logo"></a>
+        </div>
+        <div id="collapse">
+            <button id="collapseBtn">≣</button>
+            <nav>
+                <ul>
+                    <li class="primaryBg _1"><a href="#about">О себе</a></li>
+                    <li class="primaryBg _1"><a href="#portfolio">Проекты</a></li>
+                    <li class="primaryBg _1"><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="langWrapper" class="thirdBg">
+            <ul class="secondaryBg _1">
+                <li class="secondaryBg _1"><a href="./index-en.html">English</a></li>
+                <li class="secondaryBg _1"><a href="#">Русский</a></li>
+                <li class="secondaryBg _1"><a href="./index-hy.html">Հայերեն</a></li>
+            </ul>
+            <div id="lang" class="primaryBg _1">
+                <p>Язык</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="breadcrumbs">
+            <div id="text">
+                <p>Нужен веб-сайт с современным и адаптивным дизайном? Или, возможно, у Вас уже есть дизайн, и Вы желаете превратить его в рабочую страницу?</p>
+                <p>Тогда Вы по адресу! Я готов сверстать страницу вашей мечты быстро и качественно.</p>
+            </div>
+            <button onclick="changeColors()">Случайная палитра цветов</button>
+        </section>
+        <section id="about">
+            <div class="sectionTitle">
+                <h2>О себе</h2>
+            </div>
+            <div id="content">
+                <p>Приветствую! Я — Левон Саргсян, веб-программист из Еревана, специализирующийся в фронт-энде и вёрстке.</p>
+                <br>
+                <p>Я умею:</p>
+                <ul>
+                    <li>создавать веб-сайты на основе файлов .psd или Figma макетов</li>
+                    <li>верстать страницы в полном соответствии с макетом (pixel perfect)</li>
+                    <li>создать доступный дизайн для экранов любого размера</li>
+                </ul>
+            </div>
+            <img src="./images/photo_5440404549966878699_y.jpg" alt="">
+        </section>
+        <section id="portfolio">
+            <div class="sectionTitle">
+                <h2>Мои проекты</h2>
+            </div>
+            <div id="projects" class="primaryBg _1">
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/hangman_project.png" alt="Hangman">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>1-страничная игра</p>
+                        <p>html/css + js</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/gaming_project.png" alt="Gaming page">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Пример игровой страницы</p>
+                        <p>html/css на основе .psd</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/landing_project.png" alt="Landing page">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Пример целевой страницы</p>
+                        <p>html/css на основе .psd</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/example_project.png" alt="example.com">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Пример онлайн магазина</p>
+                        <p>html/css на основе .psd</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/bootstrap_band_project.png" alt="Bootstrap Band">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Пример страницы музыкальной группы</p>
+                        <p>html/css с Bootstrap</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/bootstrap_company_project.png" alt="Bootstrap Company">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Пример веб-сайта компании</p>
+                        <p>html/css с Bootstrap</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/bootstrap_personal_project.png" alt="Bootstrap Simply Me">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Пример личного веб-сайта</p>
+                        <p>html/css с Bootstrap</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="sectionTitle">
+                <h2>Отправить письмо</h2>
+            </div>
+            <div>
+                <div id="forms">
+                    <form action="">
+                        <input type="text" placeholder="Ваше имя">
+                        <input type="email" placeholder="Ваш e-mail">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Ваше письмо"></textarea>
+                        <button>Отправить</button>
+                    </form>
+                </div>
+                <div id="info">
+                    <p>Свяжитесь со мной, и я отвечу в течение 24 часов.</p>
+                    <hr>
+                    <br>
+                    <ul>
+                        <li>
+                            <h4>Тел.:</h4>
+                            <p>+374 91 24 89 13</p>
+                        </li>
+                        <li>
+                            <h4>E-mail:</h4>
+                            <p>levon.sargsyan040701@gmail.com</p>
+                        </li>
+                        <li>
+                            <h4>Соц-сети:</h4>
+                            <div id="soc">
+                                <a href="https://www.facebook.com/levon.sargsyan.5245" target="_blank"><img src="./images/facebook_logo.png" alt=""></a>
+                                <a href="https://www.instagram.com/__zovite_menya_krutoy__?igsh=NTc4MTlwNjQ2YQ==" target="_blank"><img src="./images/instagram_logo.png" alt=""></a>
+                                <a href="https://t.me/i_wanna_be_the_guy" target="_blank"><img src="./images/telegram_logo.png" alt=""></a>
+                                <!-- <a href=""><img src="" alt=""></a> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="primaryBg primaryColor _1">
+        <div id="copyright">
+            <p><span>Levon Sargsyan &copy;</span> 2024</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

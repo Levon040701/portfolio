@@ -1,0 +1,370 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: url('./images/body_bg.jpg') center / auto 100% no-repeat black;
+    font-family: "Oswald", sans-serif;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    border: none;
+    border-radius: 0;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 80px;
+    align-content: center;
+    position: fixed;
+    z-index: 4;
+}
+
+#myLogo {
+    flex: 1;
+    padding-left: 4%;
+}
+
+#myLogo a {
+    display: block;
+    height: 100%;
+    width: fit-content;
+}
+
+#myLogo img {
+    margin: 25px 0;
+    vertical-align: middle;
+    height: 30px;
+}
+
+header #collapse {
+    flex: 8;
+}
+
+header #collapseBtn {
+    height: 100%;
+    padding: 0 4%;
+    display: none;
+}
+
+header nav ul {
+    display: flex;
+    align-content: center;
+    font-size: 1.375em;
+}
+
+nav li {
+    height: 80px;
+    padding: 22px 0;
+    width: calc(min(33%, 150px));
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+    cursor: pointer;
+}
+
+nav li:hover a {
+    color: white !important;
+    text-decoration: none;
+}
+
+#langWrapper {
+    flex: 1;
+    position: relative;
+}
+
+#lang {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 25px 0;
+    transition: background-color 0.3s;
+    text-align: center;
+    font-size: 1.25em;
+    z-index: 6;
+}
+
+#langWrapper ul {
+    position: absolute;
+    bottom: 0;
+    transition: bottom 0.3s;
+    width: 100%;
+    text-align: center;
+    z-index: 4;
+}
+
+#langWrapper:hover ul {
+    bottom: -90px;
+}
+
+#langWrapper ul li {
+    border-top: 1px solid #9a9a9a;
+    height: 30px;
+}
+
+#langWrapper a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 0;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 0.75em;
+}
+
+#langWrapper a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    header #collapse {
+        flex: 3;
+        position: relative;
+    }
+
+    header #collapseBtn {
+        display: inline-block;
+    }
+    
+    header nav ul {
+        display: none;
+        font-size: 1em;
+    }
+
+    header #collapse:hover nav ul, header #collapse:active nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: fit-content;
+    }
+    
+    header nav li {
+        width: 100%;
+        height: 30px;
+        padding: 3px 5px;
+    }
+
+    #lang {
+        font-size: 0.9em;
+    }
+}
+
+main {
+    padding: 75px 10% 0;
+    background-color: white;
+}
+
+.sectionTitle {
+    width: fit-content;
+    margin-bottom: 50px;
+    padding: 10px 2%;
+    border-bottom: 2px solid #9a9a9a;
+    border-right: 2px solid #9a9a9a;
+    box-shadow: 20px 10px #dedede;
+}
+
+.sectionTitle h2 {
+    margin: 0 0.5em;
+}
+
+section#breadcrumbs {
+    font-size: 1.25em;
+    margin: 75px 0 100px;
+    padding: 50px 4%;
+    border-bottom: 2px solid #9a9a9a;
+    border-right: 2px solid #9a9a9a;
+    box-shadow: 20px 10px #dedede;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#text {
+    width: 64%;
+    padding-right: 20%;
+}
+
+section#breadcrumbs button {
+    width: 300px;
+    padding: 0 4%;
+}
+
+@media (max-width: 768px) {
+    #text {
+        width: 100%;
+        margin-bottom: 50px;
+        padding-right: 0;
+    }
+
+    section#breadcrumbs button {
+        width: 200px;
+        margin: 0 auto;
+    }
+}
+
+section#about {
+    margin-bottom: 100px;
+}
+
+section#about #content {
+    float: left;
+    width: 50%;
+    margin-right: 20%;
+    font-size: 1.25em;
+}
+
+section#about ul {
+    list-style: inside;
+}
+
+section#about img {
+    float: right;
+    width: 200px;
+}
+
+section#about::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    section#about #content {
+        float: none;
+        width: 100%;
+        margin: 0 auto 50px;
+    }
+    
+    section#about img {
+        float: none;
+        display: block;
+        width: 200px;
+        margin: 0 auto;
+    }
+}
+
+section#portfolio {
+    margin-bottom: 100px;
+}
+
+section#portfolio #projects {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid #9a9a9a;
+}
+
+section#portfolio #projects .projectElem {
+    width: 25%;
+    border: 1px solid #9a9a9a;
+    transition: opacity 0.3s;
+}
+
+section#portfolio #projects .projectThumbnail {
+    height: 13.02vw;
+    overflow: hidden;
+}
+
+section#portfolio #projects img {
+    width: 100%;
+    min-height: 12.5em;
+}
+
+section#portfolio .projectTitle {
+    background-color: white;
+    height: calc(100% - 13.02vw);
+    padding: 1.25em 5%;
+}
+
+@media (max-width: 768px) {
+    .projectTitle {
+        font-size: 0.75em;
+    }
+}
+
+section#contact .sectionTitle + div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#forms {
+    margin-bottom: 75px;
+    padding-right: 12%;
+}
+
+#forms form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#forms input, #forms textarea {
+    margin-bottom: 1.5em;
+    padding: 0.75em 2%;
+    border: 2px solid #9a9a9a;
+    border-radius: 0;
+    font-family: "Cousine", monospace;
+    font-weight: 400;
+}
+
+#forms input::placeholder, #forms textarea::placeholder {
+    font-family: "Cousine", monospace;
+    font-weight: 400;
+}
+
+#forms input {
+    width: 45%;
+}
+
+#forms textarea {
+    width: 100%;
+}
+
+#forms button {
+    padding: 0.75em 2%;
+}
+
+#info {
+    margin-bottom: 75px;
+}
+
+#info ul > li {
+    margin-bottom: 1.25em;
+}
+
+#info ul > li h4 {
+    line-height: 1.5em;
+}
+
+#soc img {
+    width: 2em;
+}
+
+footer {
+    padding: 25px 4%;
+    color: white;
+    position: relative;
+}
+
+footer #copyright span {
+    font-weight: 800;
+}
+

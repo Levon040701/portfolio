@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="palettes.css">
+    <title>Portfolio</title>
+</head>
+<body onload="changeColors()">
+    <header class="primaryBg primaryColor _1">
+        <div id="myLogo">
+            <a href="#" class="secondaryBg _1"><img src="./images/myLogo.png" alt="logo"></a>
+        </div>
+        <div id="collapse">
+            <button id="collapseBtn">≣</button>
+            <nav>
+                <ul>
+                    <li class="primaryBg _1"><a href="#about">Իմ մասին</a></li>
+                    <li class="primaryBg _1"><a href="#portfolio">Պրոեկտներ</a></li>
+                    <li class="primaryBg _1"><a href="#contact">Կապվել</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="langWrapper" class="thirdBg">
+            <ul class="secondaryBg _1">
+                <li class="secondaryBg _1"><a href="./index-en.html">English</a></li>
+                <li class="secondaryBg _1"><a href="./index-ru.html">Русский</a></li>
+                <li class="secondaryBg _1"><a href="#">Հայերեն</a></li>
+            </ul>
+            <div id="lang" class="primaryBg _1">
+                <p>Լեզու</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="breadcrumbs">
+            <div id="text">
+                <p>Ձեզ անհրաժեշտ է ժամանակակից և մատչելի ձևավորմում ունեցող վեբ-կա՞յք։ Կամ միգուցե Դուք արդեն ունեք նախագիծ և ցանկանում եք վերածել այն աշխատող կայքի՞։</p>
+                <p>Այդ դեպքում Դուք ճիշտ հասցեով եք եկել։ Ես պատրաստ եմ հավաքել Ձեր երազած վեբ-կայքը արագ և որակով։</p>
+            </div>
+            <button onclick="changeColors()">Պատահական գունապնակ</button>
+        </section>
+        <section id="about">
+            <div class="sectionTitle">
+                <h2>Իմ մասին</h2>
+            </div>
+            <div id="content">
+                <p>Ողջու՛յն։ Ես Սարգսյան Լևոնն եմ, վեբ-ծրագրավորող Երևանից և մասնագիտանում եմ front-end ծրագրավորման և կայք հավաքելու մեջ։</p>
+                <br>
+                <p>Ես կարող եմ՝</p>
+                <ul>
+                    <li>կառուցել վեբ-կայք .psd ֆայլի կամ Figma մակետի հիման վրա</li>
+                    <li>հավաքել վեբ-կայք՝ մակետի հետ լիարժեք համապատասխանությամբ (pixel perfect)</li>
+                    <li>ստեղծել մատչելի դիզայն՝ ցանկացած չափի էկրանի համար</li>
+                </ul>
+            </div>
+            <img src="./images/photo_5440404549966878699_y.jpg" alt="">
+        </section>
+        <section id="portfolio">
+            <div class="sectionTitle">
+                <h2>Իմ պրոեկտները</h2>
+            </div>
+            <div id="projects" class="primaryBg _1">
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/hangman_project.png" alt="Hangman">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>1-էջանոց խաղ</p>
+                        <p>html/css + js</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/gaming_project.png" alt="Gaming page">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Խաղային կայքի օրինակ</p>
+                        <p>html/css՝ .psd ֆայլից</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/landing_project.png" alt="Landing page">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Գլխավոր էջի օրինակ</p>
+                        <p>html/css՝ .psd ֆայլից</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/example_project.png" alt="example.com">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Առցանց խանութի օրինակ</p>
+                        <p>html/css՝ .psd ֆայլից</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/bootstrap_band_project.png" alt="Bootstrap Band">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Երաժշտական խմբի կայքի օրինակ</p>
+                        <p>html/css Bootstrap-ով</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/bootstrap_company_project.png" alt="Bootstrap Company">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Ընկերության կայքի օրինակ</p>
+                        <p>html/css Bootstrap-ով</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/bootstrap_personal_project.png" alt="Bootstrap Simply Me">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Անձական կայքի օրինակ</p>
+                        <p>html/css Bootstrap-ով</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="sectionTitle">
+                <h2>ՈՒղարկել նամակ</h2>
+            </div>
+            <div>
+                <div id="forms">
+                    <form action="">
+                        <input type="text" placeholder="Ձեր անունը">
+                        <input type="email" placeholder="Ձեր e-mail-ը">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Ձեր նամակը"></textarea>
+                        <button>ՈՒղարկել</button>
+                    </form>
+                </div>
+                <div id="info">
+                    <p>Կապվեք ինձ հետ, և ես կպատասխանեմ 24 ժամվա ընթացքում</p>
+                    <hr>
+                    <br>
+                    <ul>
+                        <li>
+                            <h4>Հեռ.՝</h4>
+                            <p>+374 91 24 89 13</p>
+                        </li>
+                        <li>
+                            <h4>E-mail</h4>
+                            <p>levon.sargsyan040701@gmail.com</p>
+                        </li>
+                        <li>
+                            <h4>Սոց-ցանցեր՝</h4>
+                            <div id="soc">
+                                <a href="https://www.facebook.com/levon.sargsyan.5245" target="_blank"><img src="./images/facebook_logo.png" alt=""></a>
+                                <a href="https://www.instagram.com/__zovite_menya_krutoy__?igsh=NTc4MTlwNjQ2YQ==" target="_blank"><img src="./images/instagram_logo.png" alt=""></a>
+                                <a href="https://t.me/i_wanna_be_the_guy" target="_blank"><img src="./images/telegram_logo.png" alt=""></a>
+                                <!-- <a href=""><img src="" alt=""></a> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="primaryBg primaryColor _1">
+        <div id="copyright">
+            <p><span>Levon Sargsyan &copy;</span> 2024</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

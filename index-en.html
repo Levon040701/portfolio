@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cousine:ital,wght@0,400;0,700;1,400;1,700&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="palettes.css">
+    <title>Portfolio</title>
+</head>
+<body onload="changeColors()" data-spy="scroll" data-target="nav" data-offset="50">
+    <header class="primaryBg primaryColor _1">
+        <div id="myLogo">
+            <a href="#" class="secondaryBg _1"><img src="./images/myLogo.png" alt="logo"></a>
+        </div>
+        <div id="collapse">
+            <button id="collapseBtn">≣</button>
+            <nav>
+                <ul>
+                    <li class="primaryBg _1">About</li>
+                    <li class="primaryBg _1">Projects</li>
+                    <li class="primaryBg _1">Contact</li>
+                </ul>
+            </nav>
+        </div>
+        <div id="langWrapper" class="thirdBg">
+            <ul class="secondaryBg _1">
+                <li class="secondaryBg _1"><a href="#">English</a></li>
+                <li class="secondaryBg _1"><a href="./index-ru.html">Русский</a></li>
+                <li class="secondaryBg _1"><a href="./index-hy.html">Հայերեն</a></li>
+            </ul>
+            <div id="lang" class="primaryBg _1">
+                <p>Language</p>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="breadcrumbs">
+            <div id="text">
+                <p>You need a website with modern and accessible design? Or maybe you already have a design and want to turn it into a functioning page?</p>
+                <p>Then you are at the right place! I'm ready to create the website of your dreams quickly and efficiently.</p>
+            </div>
+            <button onclick="changeColors()">Random color palette</button>
+        </section>
+        <section id="about">
+            <div class="sectionTitle">
+                <h2>About</h2>
+            </div>
+            <div id="content">
+                <p>Hi there! I am Levon Sargsyan, a web-programmer from Yerevan, specializing in front-end and listing.</p>
+                <br>
+                <p>I am skilled at:</p>
+                <ul>
+                    <li>building websites from .psd or Figma layouts</li>
+                    <li>pixel perfect matching</li>
+                    <li>making an accessible design for any screen size</li>
+                </ul>
+            </div>
+            <img src="./images/photo_5440404549966878699_y.jpg" alt="">
+        </section>
+        <section id="portfolio">
+            <div class="sectionTitle">
+                <h2>My projects</h2>
+            </div>
+            <div id="projects" class="primaryBg _1">
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/hangman_project.png" alt="Hangman">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>1-page game</p>
+                        <p>html/css + js</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/gaming_project.png" alt="Gaming page">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Gaming website example</p>
+                        <p>html/css from .psd</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/landing_project.png" alt="Landing page">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Landing page example</p>
+                        <p>html/css from .psd</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/example_project.png" alt="example.com">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Online shop example</p>
+                        <p>html/css from .psd</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/bootstrap_band_project.png" alt="Bootstrap Band">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Band website example</p>
+                        <p>html/css with Bootstrap</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/bootstrap_company_project.png" alt="Bootstrap Company">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Company website example</p>
+                        <p>html/css with Bootstrap</p>
+                    </div>
+                </div>
+                <div class="projectElem" onmouseenter="darken(this)" onmouseleave="lighten()">
+                    <div class="projectThumbnail">
+                        <a href="#">
+                            <img src="./images/bootstrap_personal_project.png" alt="Bootstrap Simply Me">
+                        </a>
+                    </div>
+                    <div class="projectTitle">
+                        <p>Personal page example</p>
+                        <p>html/css with Bootstrap</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="sectionTitle">
+                <h2>Send a message</h2>
+            </div>
+            <div>
+                <div id="forms">
+                    <form action="">
+                        <input type="text" placeholder="Your name">
+                        <input type="email" placeholder="Your e-mail">
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Your message"></textarea>
+                        <button>Send</button>
+                    </form>
+                </div>
+                <div id="info">
+                    <p>Contact me and I will get back to you in 24 hours.</p>
+                    <hr>
+                    <br>
+                    <ul>
+                        <li>
+                            <h4>Tel.:</h4>
+                            <p>+374 91 24 89 13</p>
+                        </li>
+                        <li>
+                            <h4>E-mail</h4>
+                            <p>levon.sargsyan040701@gmail.com</p>
+                        </li>
+                        <li>
+                            <h4>Social</h4>
+                            <div id="soc">
+                                <a href="https://www.facebook.com/levon.sargsyan.5245" target="_blank"><img src="./images/facebook_logo.png" alt=""></a>
+                                <a href="https://www.instagram.com/__zovite_menya_krutoy__?igsh=NTc4MTlwNjQ2YQ==" target="_blank"><img src="./images/instagram_logo.png" alt=""></a>
+                                <a href="https://t.me/i_wanna_be_the_guy" target="_blank"><img src="./images/telegram_logo.png" alt=""></a>
+                                <!-- <a href=""><img src="" alt=""></a> -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="primaryBg primaryColor _1">
+        <div id="copyright">
+            <p><span>Levon Sargsyan &copy;</span> 2024</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
